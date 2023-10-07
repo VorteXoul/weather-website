@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Style -->
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <title>Weather</title>
+</head>
+
+<body>
+    <div class="container-lg">
+
+        <!--Navbar -->
+        <nav class="navbar  mt-4">
+            <div class="container-sm  d-flex justify-content-center">
+                <div class="row w-100 ">
+
+                    <div class="d-flex col justify-content-start">
+                        <a
+                            class="align-self-center m-0 text-decoration-none bg-theme-secondary text-white py-3 px-3 fw-normal fs-6 text-center rounded rounded-2"><i
+                                class="fa-solid fa-cloud fs-5 me-2"></i> <span>Weather</span></a>
+                    </div>
+
+
+
+                    <div class="d-flex col-6 justify-content-center">
+                        <div class="input-group">
+                            <span class="input-group-text bg-theme-secondary border-0 text-white" id="basic-addon1"><i
+                                    class="fa-solid fa-magnifying-glass"></i></span>
+                            <input type="text" class="form-control bg-theme-secondary border-0 text-white"
+                                placeholder="Ankara" aria-label="location" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+
+                    <div class="col-4 text-center  d-flex justify-content-around">
+                        <a href="#" class="btn btn-dark btn-lg bg-theme-secondary align-self-center border-0"><i
+                                class="fa-solid fa-location-crosshairs"></i>
+                        </a>
+                        <a href="#" class="btn btn-dark btn-lg bg-theme-secondary align-self-center border-0">
+                            <i class="fa-regular fa-sun"></i></a>
+                        <a href="#" class="btn btn-light btn-lg bg-light border-0 align-self-center fw-normal"
+                            aria-current="page">
+                            <i class="fa-brands fa-github"></i>
+                            Support Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!--location main section -->
+        <div class="container  justify-content-end">
+            <div class="row  d-flex justify-content-center">
+
+                <div class="col-md-3 col-sm-12 d-flex aling-items-center  justify-content-center">
+                    <div class="col-12 row d-flex justify-content-center">
+                        <div class="d-flex p-2 ">
+                            <div
+                                class="card w-100 justify-content-center h-100 bg-theme-secondary border border-1 border-white text-white">
+
+                                <div class="w-100 d-flex justify-content-center">
+                                    <div class="m-0 w-75 ">
+                                        <div class="card-body p-0 py-2">
+                                            <i class="fa-solid fa-cloud fs-1 pb-3"></i>
+                                            <h4>27.4</h4>
+                                            <h4>Clear Sky</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-100 d-flex justify-content-center">
+                                    <hr class="bg-light-white w-75" style="height: px;">
+                                </div>
+                                
+                                <div class="w-100 d-flex justify-content-center">
+                                    <div class="w-75 justify-content-start">
+                                        <ul class="list-group-flush list-group border-0">
+                                            <li class="list-group-item border-0 m-0 p-0 py-1  bg-theme-secondary  text-white"> <i
+                                                    class="fa-solid fa-location-dot"></i> İstanbul</li>
+                                            <li class="list-group-item border-0 p-0 py-1 bg-theme-secondary  text-white"> <i
+                                                    class="fa-regular fa-calendar"></i> 7 October 2023</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 d-flex aling-items-center">
+                    <div class="col-12 m-0 p-0 row">
+
+                        <div class="col-6">
+                            <div class="card bg-theme-secondary text-light m-2">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <i class="fa-solid fa-wind fs-2 aling-items-center"></i>
+                                        </div>
+                                        <div class="col-9 text-center">
+                                            <h5>Wind Speed</h5>
+                                            <h6>24.7</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-theme-secondary text-light m-2">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <i class="fa-solid fa-wind fs-2 aling-items-center"></i>
+                                        </div>
+                                        <div class="col-9 text-center">
+                                            <h5>Pressure</h5>
+                                            <h6>24.7</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-theme-secondary text-light m-2">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <i class="fa-solid fa-wind fs-2 aling-items-center"></i>
+                                        </div>
+                                        <div class="col-9 text-center">
+                                            <h5>Sun Rise</h5>
+                                            <h6>24.7</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+
+                            <div class="card bg-theme-secondary text-light m-2 ">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <i class="fa-solid fa-wind fs-2 aling-items-center"></i>
+                                        </div>
+                                        <div class="col-9 text-center">
+                                            <h5>Wind Speed</h5>
+                                            <h6>24.7</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-theme-secondary text-light m-2">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <i class="fa-solid fa-wind fs-2 aling-items-center"></i>
+                                        </div>
+                                        <div class="col-9 text-center">
+                                            <h5>Wind Speed</h5>
+                                            <h6>24.7</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-theme-secondary text-light m-2">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <i class="fa-solid fa-wind fs-2 aling-items-center"></i>
+                                        </div>
+                                        <div class="col-9 text-center">
+                                            <h5>Wind Speed</h5>
+                                            <h6>24.7</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-md-3 col-sm-12 d-flex aling-items-center  justify-content-start">
+                    <div class="col-12 row justify-content-center">
+                        <div class="p-2">
+                            <div class="card w-100 justify-content-center h-100 bg-theme-secondary text-white">
+                                <i class="fa-solid fa-cloud fs-1 p-3"></i>
+                                <div class="card-body">
+                                    <h4>27.4</h4>
+                                    <h4>Clear Sky</h4>
+                                </div>
+                                <div class="w-100 d-flex justify-content-center">
+                                    <hr class="bg-light-white w-75" style="height: 2px;">
+                                </div>
+                                <ul class="list-group-flush list-group bg-transparent border-0">
+                                    <li class="list-group-item border-0 bg-theme-secondary text-white"> <i
+                                            class="fa-solid fa-location-dot"></i> A
+                                        second
+                                        item</li>
+                                    <li class="list-group-item border-0 bg-theme-secondary text-white"> <i
+                                            class="fa-regular fa-calendar"></i> A third
+                                        item</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

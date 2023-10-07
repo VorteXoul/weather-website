@@ -1,0 +1,37 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #0f172a;
+}
+
+.bg-theme-secondary {
+    background-color: #1e293b;
+}
+
+.bg-light-white{
+    background-color: white;
+}
+
+.form-control::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: gray;
+    opacity: 1;
+    /* Firefox */
+}
+
+.form-control:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: gray;
+}
+
+.form-control::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: gray;
+}
+
+.form-control:focus {
+    background-color: #1e293b;
+    border-color: #1e293b;
+    box-shadow: none;
+}
