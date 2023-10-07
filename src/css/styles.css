@@ -5,6 +5,10 @@ body {
     background-color: #0f172a;
 }
 
+.bg-theme-primary {
+    background-color: #0f172a;
+}
+
 .bg-theme-secondary {
     background-color: #1e293b;
 }
