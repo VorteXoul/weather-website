@@ -11,53 +11,54 @@
     <!-- Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Style -->
     <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" href="./src/css/navbar.css">
     <title>Weather</title>
 </head>
 
 <body>
     <div class="container-lg">
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white bg-theme-secondary px-2 py-0 rounded rounded-2 m-1" href="#">
+                    <i class="fa-solid fa-cloud fs-5"></i>
+                    <span class="fs-6">Weather</span>
+                </a>
 
-        <!--Navbar -->
-        <nav class="navbar  mt-4">
-            <div class="container-sm  d-flex justify-content-center">
-                <div class="row w-100 ">
+                <div class="me-auto">
+                    <a class="btn btn-dark bg-theme-secondary border-0 py-1 text-white" href="#"><i
+                            class="bi bi-brightness-high"></i></a>
+                </div>
 
-                    <div class="d-flex col justify-content-start">
-                        <a
-                            class="align-self-center m-0 text-decoration-none bg-theme-secondary text-white py-3 px-3 fw-normal fs-6 text-center rounded rounded-2"><i
-                                class="fa-solid fa-cloud fs-5 me-2"></i> <span>Weather</span></a>
-                    </div>
+                <button class="navbar-toggler bg-transparent text-white border-white" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars text-white"></i>
+                </button>
 
-
-
-                    <div class="d-flex col-6 justify-content-center">
-                        <div class="input-group">
-                            <span class="input-group-text bg-theme-secondary border-0 text-white" id="basic-addon1"><i
-                                    class="fa-solid fa-magnifying-glass"></i></span>
-                            <input type="text" class="form-control bg-theme-secondary border-0 text-white"
-                                placeholder="Ankara" aria-label="location" aria-describedby="basic-addon1">
+                <div class="collapse navbar-collapse  justify-content-lg-end" id="navbarSupportedContent">
+                    <div class="d-flex justify-content-center">
+                        <div class="input-group mt-1 mt-lg-0">
+                            <span class="input-group-text bg-theme-secondary border-0 ps-3 pe-2" id="basic-addon1"><i
+                                    class="bi bi-search text-white"></i></span>
+                            <input type="text" class="form-control bg-theme-secondary border-0 text-white m-0 p-0 ps-2"
+                                placeholder="Ankara" aria-label="Location" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="col ms-1 mt-1 mt-lg-0">
+                            <a class="btn btn-dark bg-theme-secondary border-0 text-white" aria-current="page"
+                                href="#"><i class="bi bi-crosshair"></i></a>
                         </div>
                     </div>
-
-                    <div class="col-4 text-center  d-flex justify-content-around">
-                        <a href="#" class="btn btn-dark btn-lg bg-theme-secondary align-self-center border-0"><i
-                                class="fa-solid fa-location-crosshairs"></i>
-                        </a>
-                        <a href="#" class="btn btn-dark btn-lg bg-theme-secondary align-self-center border-0">
-                            <i class="fa-regular fa-sun"></i></a>
-                        <a href="#" class="btn btn-light btn-lg bg-light border-0 align-self-center fw-normal"
-                            aria-current="page">
-                            <i class="fa-brands fa-github"></i>
-                            Support Project
-                        </a>
-                    </div>
                 </div>
+
             </div>
         </nav>
 
