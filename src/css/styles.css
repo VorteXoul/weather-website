@@ -12,6 +12,9 @@ body {
 .bg-theme-secondary {
     background-color: #1e293b;
 }
+.text-theme-secondary{
+    color: #1e293b;
+}
 
 .bg-light-white{
     background-color: white;
