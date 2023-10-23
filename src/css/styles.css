@@ -12,10 +12,33 @@ body {
 .bg-theme-secondary {
     background-color: #1e293b;
 }
-.text-theme-secondary{
+
+.text-theme-secondary {
     color: #1e293b;
 }
 
-.bg-light-white{
+.bg-light-white {
     background-color: white;
+}
+
+
+.scroll-item::-webkit-scrollbar {
+    height: 8px !important;
+}
+
+/* Track */
+.scroll-item::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+/* Handle */
+.scroll-item::-webkit-scrollbar-thumb {
+    width: 3px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+/* Handle on hover */
+.scroll-item::-webkit-scrollbar-thumb:hover {
+    background: #fff;
 }
