@@ -55,6 +55,9 @@ input.addEventListener("keyup", function (e) {
 });
 
 const WriteData = (data) => {
+  var currentdate = new Date();
+  i=1;
+  y = 1;
   const nowDegree = document.querySelector(".now-degree");
   const nowStatus = document.querySelector(".now-status");
   const locatinText = document.querySelector(".location-text");
@@ -65,6 +68,20 @@ const WriteData = (data) => {
   const HumidityValue = document.querySelector(".HumidityValue");
   const VisibilityValue = document.querySelector(".VisibilityValue");
   const SunsetValue = document.querySelector(".SunsetValue");
+  const hoursValue = document.querySelectorAll(".hour1");
+  const datesValue = document.querySelectorAll(".date1");
+  const degreeValue = document.querySelectorAll(".degree");
+  a = currentdate.getHours() % 2;
+
+  hoursValue.forEach((e)=>{
+    e.textContent = ( a + i ) + " : 00"; 
+    i++;
+  });
+  datesValue.forEach((e)=>{
+    e.textContent = currentdate.getDate() + "/" + (currentdate.getMonth()+1) + "/"  + currentdate.getFullYear(); 
+  });
+  
+
 
   nowDegree.innerHTML = `${data.current.feelslike_c}°`;
   nowStatus.innerHTML = `${data.current.condition.text}`;
@@ -76,6 +93,7 @@ const WriteData = (data) => {
   HumidityValue.textContent = `${data.current.humidity}`;
   VisibilityValue.textContent = `${data.current.vis_km} Km`;
   SunsetValue.textContent = `${data.forecast.forecastday[0].astro.sunset}`;
+
 };
 
 const WriteHourData = (data) => {
