@@ -1,45 +1,54 @@
 const input = document.querySelector("#search-input");
 const searchButton = document.querySelector("#search-btn");
 
+const getRequest = async (location, days) => {
+  const url = `https://weatherapi-com.p.rapidapi.com/forecast.json?q=${location}&days=${days}`;
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "1ecd7b3a4bmsh0dbde887af491d1p196c7djsn04cf08e2113a",
+      "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com",
+    },
+  };
+  const response = await fetch(url, options);
+  const data = await response.json();
+  console.log(data);
+  return data;
+};
+
 function search() {
   if (input.value == "") {
     input.placeholder = "Please enter a valid input";
     input.classList.add("input-error");
   } else {
-    days = 1;
-    const url = `https://weatherapi-com.p.rapidapi.com/forecast.json?q=${input.value}&days=${days}`;
-    const options = {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": "1ecd7b3a4bmsh0dbde887af491d1p196c7djsn04cf08e2113a",
-        "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com",
-      },
-    };
-    const getRequest = async () => {
-      const response = await fetch(url, options);
-      console.log(response);
-      const data = await response.json();
-      console.log(data);
-
-      if (data.error) {
-        input.value = "";
-        input.placeholder = data.error.message;
-        input.classList.add("input-error");
-      } else {
-        console.log("success");
-        input.value = "";
-        WriteData(data);
-        WriteHourData(data);
-      }
-    };
-
-    getRequest();
+    const data = getRequest(input.value, 1);
+    if (data.error) {
+      input.value = "";
+      input.placeholder = data.error.message;
+      input.classList.add("input-error");
+    } else {
+      input.value = " ";
+      WriteData(data);
+      WriteHourData(data);
+    }
   }
 }
+
+window.addEventListener(
+  "load",
+  async() => {
+    const data = await getRequest("istanbul", 1);
+    console.log(data);
+    WriteData(data);
+    WriteHourData(data);
+  },
+  false
+);
 
 searchButton.addEventListener("click", function () {
   search();
 });
+
 input.addEventListener("keyup", function (e) {
   if (e.keyCode == 13) {
     search();
@@ -62,11 +71,11 @@ const WriteData = (data) => {
   nowStatus.innerHTML = `${data.current.condition.text}`;
   locatinText.innerHTML = `${data.location.name}, ${data.location.country}`;
   locationDate.innerHTML = `${data.location.localtime}`;
-  WindSpeedValue.textContent = `${data.current.wind_kph}`;
-  PressureValue.textContent = `${data.current.pressure_mb}` + " mb ";
+  WindSpeedValue.textContent = `${data.current.wind_kph} Kph`;
+  PressureValue.textContent = `${data.current.pressure_mb} Mb`;
   SunriseValue.textContent = `${data.forecast.forecastday[0].astro.sunrise}`;
   HumidityValue.textContent = `${data.current.humidity}`;
-  VisibilityValue.textContent = `${data.current.vis_km}`;
+  VisibilityValue.textContent = `${data.current.vis_km} Km`;
   SunsetValue.textContent = `${data.forecast.forecastday[0].astro.sunset}`;
 };
 
@@ -101,7 +110,8 @@ const WriteHourData = (data) => {
     let divCol6 = document.createElement("div");
     divCol6.className = "col-6 text-end d-flex justify-content-end";
     let col6I = document.createElement("i");
-    col6I.className ="bi bi-brightness-high fs-2 d-inline align-items-center d-flex text-white";
+    col6I.className =
+      "bi bi-brightness-high fs-2 d-inline align-items-center d-flex text-white";
     divCol6.appendChild(col6I);
 
     let divCol62 = document.createElement("div");
@@ -113,7 +123,12 @@ const WriteHourData = (data) => {
     col62Degree.textContent = `${e.temp_c}°`;
     let col62Status = document.createElement("p");
     col62Status.className = "m-0 p-0 fs-6 text-secondary text-gk";
-    col62Status.textContent = `${e.condition.text.indexOf("Partly") >= 0 ? e.condition.text.split(" ")[1].charAt(0).toUpperCase() + e.condition.text.split(" ")[1].slice(1) : e.condition.text}`;
+    col62Status.textContent = `${
+      e.condition.text.indexOf("Partly") >= 0
+        ? e.condition.text.split(" ")[1].charAt(0).toUpperCase() +
+          e.condition.text.split(" ")[1].slice(1)
+        : e.condition.text
+    }`;
     col62Div.appendChild(col62Degree);
     col62Div.appendChild(col62Status);
     divCol62.appendChild(col62Div);
