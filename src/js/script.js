@@ -8,6 +8,8 @@ const footerTextSelector = document.querySelectorAll(".footer-text");
 const footerBoxSelector = document.querySelectorAll(".footer-box");
 const textftSelector = document.querySelectorAll(".text-ft");
 
+
+
 localStorage.setItem("theme","dark");
 
 buttonSelector.addEventListener("click",function(){
