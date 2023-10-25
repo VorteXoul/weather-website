@@ -29,3 +29,10 @@
     border-color: #1e293b;
     box-shadow: none;
 }
+
+
+.input-error::placeholder{
+    font-size: 12   px;
+    font-weight: bold;
+    color:red;
+}

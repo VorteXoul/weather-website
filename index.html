@@ -34,7 +34,7 @@
                 </a>
 
                 <div class="me-auto">
-                    <a class="btn btn-dark bg-theme-secondary border-0 py-1 text-white" href="#"><i
+                    <a class="btn btn-dark bg-theme-secondary border-0 py-1 text-white" id="ld-btn" href="#"><i
                             class="bi bi-brightness-high"></i></a>
                 </div>
 
@@ -46,17 +46,21 @@
 
                 <div class="collapse navbar-collapse  justify-content-lg-end" id="navbarSupportedContent">
                     <div class="d-flex justify-content-center">
-                        <div class="input-group mt-1 mt-lg-0">
-                            <span class="input-group-text bg-theme-secondary border-0 ps-3 pe-2" id="basic-addon1"><i
-                                    class="bi bi-search text-white"></i></span>
-                            <input type="text" class="form-control bg-theme-secondary border-0 text-white m-0 p-0 ps-2"
-                                placeholder="Ankara" aria-label="Location" aria-describedby="basic-addon1">
-                        </div>
-                        <div class="col ms-1 mt-1 mt-lg-0">
-                            <a class="btn btn-dark bg-theme-secondary border-0 text-white" aria-current="page"
-                                href="#"><i class="bi bi-crosshair"></i></a>
-                        </div>
+                     
+                            <div class="input-group mt-1 mt-lg-0">
+                                <span class="input-group-text bg-theme-secondary border-0 ps-3 pe-2" id="search-btn"><i
+                                        class="bi bi-search text-white"></i></span>
+                                <input type="text" id="search-input"
+                                    class="form-control bg-theme-secondary border-0 text-white m-0 p-0 ps-2"
+                                    placeholder="Ankara" aria-label="Location" aria-describedby="search-btn">
+                            </div>
+                            <div class="col ms-1 mt-1 mt-lg-0">
+                                <a class="btn btn-dark bg-theme-secondary border-0 text-white" aria-current="page"
+                                    href="#"><i class="bi bi-crosshair"></i></a>
+                            </div>
+                    
                     </div>
+
                 </div>
 
             </div>
@@ -67,7 +71,7 @@
         <div class="container-xl justify-content-end">
 
             <div class="row p-2 text-light">
-                <h2>Today Overview</h2>
+                <h2 class="text-gk">Today Overview</h2>
             </div>
             <!--big location card-->
 
@@ -81,26 +85,26 @@
                                 <div class="w-100 d-flex justify-content-center">
                                     <div class="m-0 w-75">
                                         <div class="card-body p-0">
-                                            <i class="fa-solid fa-cloud my-4" style="font-size: 4rem;"></i>
-                                            <h4>27.4</h4>
-                                            <h4>Clear Sky</h4>
+                                            <i class="fa-solid fa-cloud my-4 text-gk" style="font-size: 4rem;"></i>
+                                            <h4 class="text-gk now-degree">27.4</h4>
+                                            <h4 class="text-gk now-status">Clear Sky</h4>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="w-100 d-flex justify-content-center">
-                                    <hr class="bg-light-white w-75" style="height: px;">
+                                    <hr class="bg-light-white w-75 text-gk" style="height: px;">
                                 </div>
 
                                 <div class="w-100 d-flex justify-content-center">
                                     <div class="w-75 justify-content-start">
                                         <ul class="list-group-flush list-group border-0">
                                             <li
-                                                class="list-group-item border-0 m-0 p-0 py-1  bg-theme-secondary  text-white">
-                                                <i class="fa-solid fa-location-dot"></i> İstanbul
+                                                class="list-group-item border-0 m-0 p-0 py-1 bg-transparent text-white text-gk">
+                                                <i class="fa-solid fa-location-dot text-gk"></i> <span class="location-text">İstanbul</span>
                                             </li>
                                             <li
-                                                class="list-group-item border-0 p-0 py-1 bg-theme-secondary  text-white">
-                                                <i class="fa-regular fa-calendar"></i> 7 October 2023
+                                                class="list-group-item border-0 p-0 py-1 bg-transparent text-white text-gk">
+                                                <i class="fa-regular fa-calendar text-gk "></i> <span class="location-date">7 October 2023</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -117,11 +121,11 @@
                             <div class="card-body">
                                 <div class="row p-0 ">
                                     <div class="col-3">
-                                        <i class="fa-solid fa-wind fs-2 aling-items-center "></i>
+                                        <i class="fa-solid fa-wind fs-2 aling-items-center text-gk"></i>
                                     </div>
                                     <div class="col-9 text-center text-truncate">
-                                        <h6>Wind Speed</h6>
-                                        <h6>24.7</h6>
+                                        <h6 class="text-gk WindSpeed">Wind Speed</h6>
+                                        <h6 class="text-gk WindSpeedvalue">24.7</h6>
                                     </div>
                                 </div>
                             </div>
@@ -131,11 +135,11 @@
                             <div class="card-body">
                                 <div class="row p-0">
                                     <div class="col-3">
-                                        <i class="fa-solid fa-wind fs-2 aling-items-center"></i>
+                                        <i class="fa-solid fa-wind fs-2 aling-items-center text-gk"></i>
                                     </div>
                                     <div class="col-9 text-center text-truncate">
-                                        <h6>Pressure</h6>
-                                        <h6>24.7</h6>
+                                        <h6 class="text-gk">Pressure</h6>
+                                        <h6 class="text-gk">24.7</h6>
                                     </div>
                                 </div>
                             </div>
@@ -146,11 +150,11 @@
                             <div class="card-body">
                                 <div class="row p-0">
                                     <div class="col-3">
-                                        <i class="fa-solid fa-wind fs-2 aling-items-center"></i>
+                                        <i class="fa-solid textg-gk fa-wind fs-2 aling-items-center text-gk"></i>
                                     </div>
                                     <div class="col-9 text-center text-truncate">
-                                        <h6>Sunrise</h6>
-                                        <h6>24.7</h6>
+                                        <h6 class="text-gk">Sunrise</h6>
+                                        <h6 class="text-gk">24.7</h6>
                                     </div>
                                 </div>
                             </div>
@@ -163,11 +167,11 @@
                             <div class="card-body">
                                 <div class="row p-0">
                                     <div class="col-3">
-                                        <i class="fa-solid fa-wind fs-2 aling-items-center"></i>
+                                        <i class="fa-solid textg-gk fa-wind fs-2 aling-items-center"></i>
                                     </div>
                                     <div class="col-9 text-center text-truncate">
-                                        <h6>Humidity</h6>
-                                        <h6>24.7</h6>
+                                        <h6 class="text-gk">Humidity</h6>
+                                        <h6 class="text-gk">24.7</h6>
                                     </div>
                                 </div>
                             </div>
@@ -177,11 +181,11 @@
                             <div class="card-body">
                                 <div class="row p-0">
                                     <div class="col-3">
-                                        <i class="fa-solid fa-wind fs-2 aling-items-center"></i>
+                                        <i class="fa-solid textg-gk fa-wind fs-2 aling-items-center"></i>
                                     </div>
                                     <div class="col-9 text-center text-truncate">
-                                        <h6>Visibility</h6>
-                                        <h6>24.7</h6>
+                                        <h6 class="text-gk">Visibility</h6>
+                                        <h6 class="text-gk">24.7</h6>
                                     </div>
                                 </div>
                             </div>
@@ -191,11 +195,11 @@
                             <div class="card-body">
                                 <div class="row p-0">
                                     <div class="col-3">
-                                        <i class="fa-solid fa-wind fs-2 aling-items-center"></i>
+                                        <i class="fa-solid textg-gk fa-wind fs-2 aling-items-center"></i>
                                     </div>
                                     <div class="col-9 text-center text-truncate">
-                                        <h6>Sunset</h6>
-                                        <h6>24.7</h6>
+                                        <h6 class="text-gk">Sunset</h6>
+                                        <h6 class="text-gk">24.7</h6>
                                     </div>
                                 </div>
                             </div>
@@ -214,13 +218,13 @@
                                     <div class="card bg-transparent m-0 rounded-0 border-0">
                                         <div class="row w-100 m-0 p-0 ">
                                             <div class="col-5 col-md-6 text-start ">
-                                                <p class=" m-0 p-0 fs-6 text-secondary">14 Oct Sat</p>
-                                                <p class=" m-0 p-0 fs-6 text-white">15:00</p>
+                                                <p class=" m-0 p-0 fs-6 text-secondary text-gk">14 Oct Sat</p>
+                                                <p class=" m-0 p-0 fs-6 text-white text-gk">15:00</p>
                                             </div>
                                             <div class="row m-0 p-0 col-7 col-md-6 ">
                                                 <div class="col-12 m-0 p-0 text-end justify-content-center d-flex">
                                                     <div class="d-flex align-items-center">
-                                                        <p class=" m-0 p-0 fs-6 text-white fw-light">17.1°C</p>
+                                                        <p class=" m-0 p-0 fs-6 text-white fw-light text-gk">17.1°C</p>
                                                     </div>
                                                 </div>
 
@@ -233,13 +237,13 @@
                                     <div class="card bg-transparent m-0 rounded-0 border-0">
                                         <div class="row w-100 m-0 p-0">
                                             <div class="col-5 col-md-6 text-start">
-                                                <p class=" m-0 p-0 fs-6 text-secondary">14 Oct Sat</p>
+                                                <p class=" m-0 p-0 fs-6 text-secondary text-gk">14 Oct Sat</p>
                                                 <p class=" m-0 p-0 fs-6 text-white">15:00</p>
                                             </div>
                                             <div class="row m-0 p-0 col-7 col-md-6">
                                                 <div class="col-12 m-0 p-0 text-end justify-content-center d-flex">
                                                     <div class="d-flex align-items-center">
-                                                        <p class=" m-0 p-0 fs-6 text-white fw-light">17.1°C</p>
+                                                        <p class=" m-0 p-0 fs-6 text-white fw-light text-gk">17.1°C</p>
                                                     </div>
                                                 </div>
 
@@ -252,13 +256,13 @@
                                     <div class="card bg-transparent m-0 rounded-0 border-0">
                                         <div class="row w-100 m-0 p-0">
                                             <div class="col-5 col-md-6 text-start">
-                                                <p class=" m-0 p-0 fs-6 text-secondary">14 Oct Sat</p>
-                                                <p class=" m-0 p-0 fs-6 text-white">15:00</p>
+                                                <p class=" m-0 p-0 fs-6 text-secondary text-gk">14 Oct Sat</p>
+                                                <p class=" m-0 p-0 fs-6 text-white text-gk">15:00</p>
                                             </div>
                                             <div class="row m-0 p-0 col-7 col-md-6">
                                                 <div class="col-12 m-0 p-0 text-end justify-content-center d-flex">
                                                     <div class="d-flex align-items-center">
-                                                        <p class=" m-0 p-0 fs-6 text-white fw-light">17.1°C</p>
+                                                        <p class=" m-0 p-0 fs-6 text-white fw-light text-gk">17.1°C</p>
                                                     </div>
                                                 </div>
 
@@ -272,13 +276,13 @@
                                     <div class="card bg-transparent m-0 rounded-0 border-0">
                                         <div class="row w-100 m-0 p-0">
                                             <div class="col-5 col-md-6 text-start">
-                                                <p class=" m-0 p-0 fs-6 text-secondary">14 Oct Sat</p>
-                                                <p class=" m-0 p-0 fs-6 text-white">15:00</p>
+                                                <p class=" m-0 p-0 fs-6 text-secondary text-gk">14 Oct Sat</p>
+                                                <p class=" m-0 p-0 fs-6 text-white text-gk">15:00</p>
                                             </div>
                                             <div class="row m-0 p-0 col-7 col-md-6">
                                                 <div class="col-12 m-0 p-0 text-end justify-content-center d-flex">
                                                     <div class="d-flex align-items-center">
-                                                        <p class=" m-0 p-0 fs-6 text-white fw-light">17.1°C</p>
+                                                        <p class=" m-0 p-0 fs-6 text-white fw-light text-gk">17.1°C</p>
                                                     </div>
                                                 </div>
 
@@ -291,13 +295,13 @@
                                     <div class="card bg-transparent m-0 rounded-0 border-0">
                                         <div class="row w-100 m-0 p-0">
                                             <div class="col-5 col-md-6 text-start">
-                                                <p class=" m-0 p-0 fs-6 text-secondary">14 Oct Sat</p>
-                                                <p class=" m-0 p-0 fs-6 text-white">15:00</p>
+                                                <p class=" m-0 p-0 fs-6 text-secondary text-gk">14 Oct Sat</p>
+                                                <p class=" m-0 p-0 fs-6 text-white text-gk">15:00</p>
                                             </div>
                                             <div class="row m-0 p-0 col-7 col-md-6">
                                                 <div class="col-12 m-0 p-0 text-end justify-content-center d-flex">
                                                     <div class="d-flex align-items-center">
-                                                        <p class=" m-0 p-0 fs-6 text-white fw-light">17.1°C</p>
+                                                        <p class=" m-0 p-0 fs-6 text-white fw-light text-gk">17.1°C</p>
                                                     </div>
                                                 </div>
 
@@ -316,60 +320,68 @@
 
                 <div class="col-12 col-sm ">
                     <div class="row p-2 text-light">
-                        <h2>Next 5 Days</h2>
+                        <h2 class="text-gk">Next 5 Days</h2>
                     </div>
                     <div class="col ">
                         <div class="row overflow-x-auto flex-nowrap scroll-item py-1">
 
                             <div class="col-3 col-sm-2 my-1 me-1 p-0 d-flex align-items-center">
-                                <div class="card w-100 bg-theme-light d-flex align-items-center justify-content-center bg-dan text-center">
-                                    <p class="text-center text-secondary pt-3 d-flex align-items-center "> ALL DAYS</p>
+                                <div
+                                    class="card w-100 bg-theme-light d-flex align-items-center justify-content-center bg-dan text-center">
+                                    <p class="text-center text-secondary pt-3 d-flex align-items-center text-gk"> ALL
+                                        DAYS</p>
                                 </div>
                             </div>
 
                             <div class="col-2 my-1 mx-1 p-0 d-flex align-items-center">
-                                <div class="card w-100 bg-theme-secondary d-flex align-items-center justify-content-center  text-center">
-                                    <p class="text-center text-light pt-3 d-flex align-items-center  "> DAY 1</p>
+                                <div
+                                    class="card w-100 bg-theme-secondary d-flex align-items-center justify-content-center  text-center">
+                                    <p class="text-center text-light pt-3 d-flex align-items-center text-ft "> DAY 1</p>
                                 </div>
                             </div>
 
 
                             <div class="col-2 my-1 mx-1 p-0 d-flex align-items-center">
-                                <div class="card w-100 bg-theme-secondary d-flex align-items-center justify-content-center  text-center">
-                                    <p class="text-center text-light pt-3 d-flex align-items-center "> DAY 2</p>
+                                <div
+                                    class="card w-100 bg-theme-secondary d-flex align-items-center justify-content-center  text-center">
+                                    <p class="text-center text-light pt-3 d-flex align-items-center text-ft"> DAY 2</p>
                                 </div>
                             </div>
 
 
                             <div class="col-2 my-1 mx-1 p-0  d-flex align-items-center">
-                                <div class="card w-100 bg-theme-secondary d-flex align-items-center justify-content-center bg-dan text-center">
-                                    <p class="text-center text-light pt-3 d-flex align-items-center "> DAY 3</p>
+                                <div
+                                    class="card w-100 bg-theme-secondary d-flex align-items-center justify-content-center bg-dan text-center">
+                                    <p class="text-center text-light pt-3 d-flex align-items-center text-ft"> DAY 3</p>
                                 </div>
                             </div>
 
 
                             <div class="col-2 my-1 mx-1 p-0  d-flex align-items-center">
-                                <div class="card w-100 bg-theme-secondary d-flex align-items-center justify-content-center bg-dan text-center">
-                                    <p class="text-center text-light pt-3 d-flex align-items-center "> DAY 4</p>
+                                <div
+                                    class="card w-100 bg-theme-secondary d-flex align-items-center justify-content-center bg-dan text-center">
+                                    <p class="text-center text-light pt-3 d-flex align-items-center text-ft "> DAY 4
+                                    </p>
                                 </div>
                             </div>
 
 
                             <div class="col-2 my-1 ms-1 p-0  d-flex align-items-center">
-                                <div class="card w-100 bg-theme-secondary d-flex align-items-center justify-content-center bg-dan text-center">
-                                    <p class="text-center text-light pt-3 d-flex align-items-center "> DAY 5</p>
+                                <div
+                                    class="card w-100 bg-theme-secondary d-flex align-items-center justify-content-center bg-dan text-center">
+                                    <p class="text-center text-light pt-3 d-flex align-items-center text-ft "> DAY 5</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row m-0 p-0 mt-2 mb-4 ">
 
-                        <div class=" col-12 col-sm-6 col-md-6 col-xl-3 mt-2 px-1">
+                        <!-- <div class=" col-12 col-sm-6 col-md-6 col-xl-3 mt-2 px-1">
                             <div class="card bg-theme-secondary p-1 m-0">
                                 <div class="row w-100 m-0 p-0">
                                     <div class="col-5 col-md-6 text-start">
-                                        <p class=" m-0 p-0 fs-5 text-secondary">14 Oct Sat</p>
-                                        <p class=" m-0 p-0 fs-6 text-white">15:00</p>
+                                        <p class=" m-0 p-0 fs-5 text-secondary text-gk ">14 Oct Sat</p>
+                                        <p class=" m-0 p-0 fs-6 text-white text-gk ">15:00</p>
                                     </div>
                                     <div class="row m-0 p-0 col-7 col-md-6">
                                         <div class="col-6 text-end d-flex justify-content-end">
@@ -378,7 +390,79 @@
                                         </div>
                                         <div class="col-6 m-0 p-0 text-center justify-content-center">
                                             <div class="align-items-center ">
-                                                <p class=" m-0 p-0 fs-5 text-white fw-light">17.1°C </p>
+                                                <p class=" m-0 p-0 fs-5 text-white fw-light text-gk">17.1°C </p>
+                                                <p class=" m-0 p-0 fs-6 text-secondary text-gk">Clear</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" col-12 col-sm-6 col-md-6 col-xl-3 mt-2 px-1">
+                            <div class="card bg-theme-secondary p-1 m-0">
+                                <div class="row w-100 m-0 p-0">
+                                    <div class="col-5 col-md-6 text-start">
+                                        <p class=" m-0 p-0 fs-5 text-secondary text-gk">14 Oct Sat</p>
+                                        <p class=" m-0 p-0 fs-6 text-white text-gk nowTime">15:00</p>
+                                    </div>
+                                    <div class="row m-0 p-0 col-7 col-md-6">
+                                        <div class="col-6 text-end d-flex justify-content-end">
+                                            <i
+                                                class="bi bi-brightness-high fs-2 d-inline align-items-center d-flex text-white"></i>
+                                        </div>
+                                        <div class="col-6 m-0 p-0 text-center justify-content-center">
+                                            <div class="align-items-center ">
+                                                <p class=" m-0 p-0 fs-5 text-white fw-light text-gk">17.1°C </p>
+                                                <p class=" m-0 p-0 fs-6 text-secondary text-gk">Clear</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" col-12 col-sm-6 col-md-6 col-xl-3 mt-2 px-1">
+                            <div class="card bg-theme-secondary p-1 m-0">
+                                <div class="row w-100 m-0 p-0">
+                                    <div class="col-5 col-md-6 text-start">
+                                        <p class=" m-0 p-0 fs-5 text-secondary text-gk">14 Oct Sat</p>
+                                        <p class=" m-0 p-0 fs-6 text-white text-gk">15:00</p>
+                                    </div>
+                                    <div class="row m-0 p-0 col-7 col-md-6">
+                                        <div class="col-6 text-end d-flex justify-content-end">
+                                            <i
+                                                class="bi bi-brightness-high fs-2 d-inline align-items-center d-flex text-white"></i>
+                                        </div>
+                                        <div class="col-6 m-0 p-0 text-center justify-content-center">
+                                            <div class="align-items-center ">
+                                                <p class=" m-0 p-0 fs-5 text-white fw-light text-gk">17.1°C </p>
+                                                <p class=" m-0 p-0 fs-6 text-secondary text-gk">Clear</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" col-12 col-sm-6 col-md-6 col-xl-3 mt-2 px-1">
+                            <div class="card bg-theme-secondary p-1 m-0">
+                                <div class="row w-100 m-0 p-0">
+                                    <div class="col-5 col-md-6 text-start">
+                                        <p class=" m-0 p-0 fs-5 text-secondary text-gk">14 Oct Sat</p>
+                                        <p class=" m-0 p-0 fs-6 text-white text-gk">15:00</p>
+                                    </div>
+                                    <div class="row m-0 p-0 col-7 col-md-6">
+                                        <div class="col-6 text-end d-flex justify-content-end">
+                                            <i
+                                                class="bi bi-brightness-high fs-2 d-inline align-items-center d-flex text-white"></i>
+                                        </div>
+                                        <div class="col-6 m-0 p-0 text-center justify-content-center">
+                                            <div class="align-items-center ">
+                                                <p class=" m-0 p-0 fs-5 text-white fw-light text-gk">17.1°C </p>
                                                 <p class=" m-0 p-0 fs-6 text-secondary">Clear</p>
                                             </div>
                                         </div>
@@ -392,8 +476,8 @@
                             <div class="card bg-theme-secondary p-1 m-0">
                                 <div class="row w-100 m-0 p-0">
                                     <div class="col-5 col-md-6 text-start">
-                                        <p class=" m-0 p-0 fs-5 text-secondary">14 Oct Sat</p>
-                                        <p class=" m-0 p-0 fs-6 text-white">15:00</p>
+                                        <p class=" m-0 p-0 fs-5 text-secondary text-gk">14 Oct Sat</p>
+                                        <p class=" m-0 p-0 fs-6 text-white text-gk">15:00</p>
                                     </div>
                                     <div class="row m-0 p-0 col-7 col-md-6">
                                         <div class="col-6 text-end d-flex justify-content-end">
@@ -402,8 +486,8 @@
                                         </div>
                                         <div class="col-6 m-0 p-0 text-center justify-content-center">
                                             <div class="align-items-center ">
-                                                <p class=" m-0 p-0 fs-5 text-white fw-light">17.1°C </p>
-                                                <p class=" m-0 p-0 fs-6 text-secondary">Clear</p>
+                                                <p class=" m-0 p-0 fs-5 text-white fw-light text-gk">17.1°C </p>
+                                                <p class=" m-0 p-0 fs-6 text-secondary text-gk">Clear</p>
                                             </div>
                                         </div>
 
@@ -416,8 +500,8 @@
                             <div class="card bg-theme-secondary p-1 m-0">
                                 <div class="row w-100 m-0 p-0">
                                     <div class="col-5 col-md-6 text-start">
-                                        <p class=" m-0 p-0 fs-5 text-secondary">14 Oct Sat</p>
-                                        <p class=" m-0 p-0 fs-6 text-white">15:00</p>
+                                        <p class=" m-0 p-0 fs-5 text-secondary text-gk">14 Oct Sat</p>
+                                        <p class=" m-0 p-0 fs-6 text-white text-gk">15:00</p>
                                     </div>
                                     <div class="row m-0 p-0 col-7 col-md-6">
                                         <div class="col-6 text-end d-flex justify-content-end">
@@ -426,8 +510,8 @@
                                         </div>
                                         <div class="col-6 m-0 p-0 text-center justify-content-center">
                                             <div class="align-items-center ">
-                                                <p class=" m-0 p-0 fs-5 text-white fw-light">17.1°C </p>
-                                                <p class=" m-0 p-0 fs-6 text-secondary">Clear</p>
+                                                <p class=" m-0 p-0 fs-5 text-white fw-light text-gk">17.1°C </p>
+                                                <p class=" m-0 p-0 fs-6 text-secondary text-gk">Clear</p>
                                             </div>
                                         </div>
 
@@ -440,8 +524,8 @@
                             <div class="card bg-theme-secondary p-1 m-0">
                                 <div class="row w-100 m-0 p-0">
                                     <div class="col-5 col-md-6 text-start">
-                                        <p class=" m-0 p-0 fs-5 text-secondary">14 Oct Sat</p>
-                                        <p class=" m-0 p-0 fs-6 text-white">15:00</p>
+                                        <p class=" m-0 p-0 fs-5 text-secondary text-gk">14 Oct Sat</p>
+                                        <p class=" m-0 p-0 fs-6 text-white text-gk">15:00</p>
                                     </div>
                                     <div class="row m-0 p-0 col-7 col-md-6">
                                         <div class="col-6 text-end d-flex justify-content-end">
@@ -450,8 +534,8 @@
                                         </div>
                                         <div class="col-6 m-0 p-0 text-center justify-content-center">
                                             <div class="align-items-center ">
-                                                <p class=" m-0 p-0 fs-5 text-white fw-light">17.1°C </p>
-                                                <p class=" m-0 p-0 fs-6 text-secondary">Clear</p>
+                                                <p class=" m-0 p-0 fs-5 text-white fw-light text-gk">17.1°C </p>
+                                                <p class=" m-0 p-0 fs-6 text-secondary text-gk">Clear</p>
                                             </div>
                                         </div>
 
@@ -464,8 +548,8 @@
                             <div class="card bg-theme-secondary p-1 m-0">
                                 <div class="row w-100 m-0 p-0">
                                     <div class="col-5 col-md-6 text-start">
-                                        <p class=" m-0 p-0 fs-5 text-secondary">14 Oct Sat</p>
-                                        <p class=" m-0 p-0 fs-6 text-white">15:00</p>
+                                        <p class=" m-0 p-0 fs-5 text-secondary text-gk">14 Oct Sat</p>
+                                        <p class=" m-0 p-0 fs-6 text-white text-gk">15:00</p>
                                     </div>
                                     <div class="row m-0 p-0 col-7 col-md-6">
                                         <div class="col-6 text-end d-flex justify-content-end">
@@ -474,87 +558,15 @@
                                         </div>
                                         <div class="col-6 m-0 p-0 text-center justify-content-center">
                                             <div class="align-items-center ">
-                                                <p class=" m-0 p-0 fs-5 text-white fw-light">17.1°C </p>
-                                                <p class=" m-0 p-0 fs-6 text-secondary">Clear</p>
+                                                <p class=" m-0 p-0 fs-5 text-white fw-light text-gk">17.1°C </p>
+                                                <p class=" m-0 p-0 fs-6 text-secondary text-gk">Clear</p>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class=" col-12 col-sm-6 col-md-6 col-xl-3 mt-2 px-1">
-                            <div class="card bg-theme-secondary p-1 m-0">
-                                <div class="row w-100 m-0 p-0">
-                                    <div class="col-5 col-md-6 text-start">
-                                        <p class=" m-0 p-0 fs-5 text-secondary">14 Oct Sat</p>
-                                        <p class=" m-0 p-0 fs-6 text-white">15:00</p>
-                                    </div>
-                                    <div class="row m-0 p-0 col-7 col-md-6">
-                                        <div class="col-6 text-end d-flex justify-content-end">
-                                            <i
-                                                class="bi bi-brightness-high fs-2 d-inline align-items-center d-flex text-white"></i>
-                                        </div>
-                                        <div class="col-6 m-0 p-0 text-center justify-content-center">
-                                            <div class="align-items-center ">
-                                                <p class=" m-0 p-0 fs-5 text-white fw-light">17.1°C </p>
-                                                <p class=" m-0 p-0 fs-6 text-secondary">Clear</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class=" col-12 col-sm-6 col-md-6 col-xl-3 mt-2 px-1">
-                            <div class="card bg-theme-secondary p-1 m-0">
-                                <div class="row w-100 m-0 p-0">
-                                    <div class="col-5 col-md-6 text-start">
-                                        <p class=" m-0 p-0 fs-5 text-secondary">14 Oct Sat</p>
-                                        <p class=" m-0 p-0 fs-6 text-white">15:00</p>
-                                    </div>
-                                    <div class="row m-0 p-0 col-7 col-md-6">
-                                        <div class="col-6 text-end d-flex justify-content-end">
-                                            <i
-                                                class="bi bi-brightness-high fs-2 d-inline align-items-center d-flex text-white"></i>
-                                        </div>
-                                        <div class="col-6 m-0 p-0 text-center justify-content-center">
-                                            <div class="align-items-center ">
-                                                <p class=" m-0 p-0 fs-5 text-white fw-light">17.1°C </p>
-                                                <p class=" m-0 p-0 fs-6 text-secondary">Clear</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class=" col-12 col-sm-6 col-md-6 col-xl-3 mt-2 px-1">
-                            <div class="card bg-theme-secondary p-1 m-0">
-                                <div class="row w-100 m-0 p-0">
-                                    <div class="col-5 col-md-6 text-start">
-                                        <p class=" m-0 p-0 fs-5 text-secondary">14 Oct Sat</p>
-                                        <p class=" m-0 p-0 fs-6 text-white">15:00</p>
-                                    </div>
-                                    <div class="row m-0 p-0 col-7 col-md-6">
-                                        <div class="col-6 text-end d-flex justify-content-end">
-                                            <i
-                                                class="bi bi-brightness-high fs-2 d-inline align-items-center d-flex text-white"></i>
-                                        </div>
-                                        <div class="col-6 m-0 p-0 text-center justify-content-center">
-                                            <div class="align-items-center ">
-                                                <p class=" m-0 p-0 fs-5 text-white fw-light">17.1°C </p>
-                                                <p class=" m-0 p-0 fs-6 text-secondary">Clear</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
@@ -562,10 +574,10 @@
         </div>
 
         <footer class="container-xl">
-            <div class="row  p-2">
+            <div class="row p-2">
                 <div
                     class="col col-md-2  d-flex justify-content-start justify-content-md-start align-items-center order-md-1 order-1 p-0 px-1 py-2">
-                    <p class="text-white bg-theme-secondary px-2 py-2 rounded rounded-2 m-1">
+                    <p class="footer-text footer-box text-white bg-theme-secondary px-2 py-2 rounded rounded-2 m-1">
                         <i class="fa-solid fa-cloud fs-5"></i>
                         <span class="fs-6">Weather</span>
                     </p>
@@ -573,15 +585,15 @@
                 <div class="col-12 col-md-8 d-flex justify-content-center align-items-center order-last order-md-2 p-0">
 
                     <p
-                        class="bg-theme-secondary text-white rounded rounded-2 px-3 py-2 m-0 w-100 text-center mt-2 mt-md-0">
+                        class="footer-text footer-box text-white bg-theme-secondary rounded rounded-2 px-3 py-2 m-0 w-100 text-center mt-2 mt-md-0">
                         Weather Data provided by my mind
                     </p>
 
                 </div>
-                <div class="col col-md-2 d-flex justify-content-end order-md-3 order-2 p-0 aling-items-center">
-                    <a href="#" class="d-flex align-items-center m-0 p-0">
+                <div class=" col col-md-2 d-flex justify-content-end order-md-3 order-2 p-0 aling-items-center ">
+                    <a href="#" class="d-flex align-items-center m-0 p-0 ">
                         <i
-                            class="bi bi-caret-up-fill text-white bg-theme-secondary p-0 px-3 m-0 m-1 rounded rounded-2 fs-3"></i>
+                            class="footer-box footer-text bi bi-caret-up-fill text-white bg-theme-secondary p-0 px-3 m-0 m-1 rounded rounded-2 fs-3"></i>
                     </a>
                 </div>
             </div>
@@ -599,6 +611,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+    <script src="./src/js/script.js"></script>
+    <script src="./src/js/api.js"></script>
+    <script src="./src/js/search.js"></script>
 </body>
 
 </html>

@@ -13,6 +13,19 @@ body {
     background-color: #1e293b;
 }
 
+.bg-theme-light {
+    background-color: #fff;
+}
+
+.text-theme-black{
+    color: #000;
+}
+
+.text-theme-light{
+    color: #fff;
+}
+
+
 .text-theme-secondary {
     color: #1e293b;
 }
