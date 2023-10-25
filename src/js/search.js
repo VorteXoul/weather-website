@@ -16,12 +16,12 @@ const getRequest = async (location, days) => {
   return data;
 };
 
-function search() {
+async function  search() {
   if (input.value == "") {
     input.placeholder = "Please enter a valid input";
     input.classList.add("input-error");
   } else {
-    const data = getRequest(input.value, 1);
+    const data = await getRequest(input.value, 1);
     if (data.error) {
       input.value = "";
       input.placeholder = data.error.message;
@@ -38,7 +38,6 @@ window.addEventListener(
   "load",
   async() => {
     const data = await getRequest("istanbul", 1);
-    console.log(data);
     WriteData(data);
     WriteHourData(data);
   },
@@ -83,7 +82,6 @@ const WriteHourData = (data) => {
   let nowDateValue = Date.now();
 
   data.forecast.forecastday[0].hour.forEach((e) => {
-    console.log("1");
     const hoursDiv = document.querySelector("#hours");
 
     let divCol = document.createElement("div");
@@ -140,7 +138,6 @@ const WriteHourData = (data) => {
     divCard.appendChild(divRow);
     divCol.appendChild(divCard);
 
-    console.log(divCol);
     hoursDiv.appendChild(divCol);
   });
 };
