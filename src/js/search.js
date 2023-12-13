@@ -71,12 +71,18 @@ const WriteData = (data) => {
   const hoursValue = document.querySelectorAll(".hour1");
   const datesValue = document.querySelectorAll(".date1");
   const degreeValue = document.querySelectorAll(".degree");
-  a = currentdate.getHours() % 2;
+  console.log(data);
+  a = currentdate.getHours();
+  console.log(a);
 
-  hoursValue.forEach((e)=>{
-    e.textContent = ( a + i ) + " : 00"; 
-    i++;
-  });
+  
+  for(let i = a; i < a + 5; i++){
+    console.log(data.forecast.forecastday[0].hour[i].time)
+    hoursValue[i-a].textContent = data.forecast.forecastday[0].hour[i].time.split(" ")[1];
+    degreeValue[i-a].textContent = data.forecast.forecastday[0].hour[i].temp_c + "°C";
+  }
+
+ 
   datesValue.forEach((e)=>{
     e.textContent = currentdate.getDate() + "/" + (currentdate.getMonth()+1) + "/"  + currentdate.getFullYear(); 
   });
@@ -143,7 +149,11 @@ const WriteHourData = (data) => {
       e.condition.text.indexOf("Partly") >= 0
         ? e.condition.text.split(" ")[1].charAt(0).toUpperCase() +
           e.condition.text.split(" ")[1].slice(1)
-        : e.condition.text
+        : 
+        (e.condition.text.indexOf("Patchy") >= 0
+        ? e.condition.text.split(" ")[1].charAt(0).toUpperCase() +
+          e.condition.text.split(" ")[1].slice(1)
+        : e.condition.text)
     }`;
     col62Div.appendChild(col62Degree);
     col62Div.appendChild(col62Status);
