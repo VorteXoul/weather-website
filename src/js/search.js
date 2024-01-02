@@ -55,9 +55,7 @@ input.addEventListener("keyup", function (e) {
 });
 
 const WriteData = (data) => {
-  var currentdate = new Date();
-  i=1;
-  y = 1;
+  let currentdate = new Date();
   const nowDegree = document.querySelector(".now-degree");
   const nowStatus = document.querySelector(".now-status");
   const locatinText = document.querySelector(".location-text");
